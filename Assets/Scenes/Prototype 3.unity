@@ -713,9 +713,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnItems:
   - {fileID: 4207959073486970639, guid: 395ca8f92b8fe6143ad93bc1784f8d59, type: 3}
-  minSpawnRange: {x: 0, y: 0, z: 0}
-  maxSpawnRange: {x: 2, y: 0, z: 0}
-  spawnPos: {x: 20, y: 2, z: 0}
+  minSpawnRange: {x: -6, y: 0, z: 0}
+  maxSpawnRange: {x: 10, y: 0, z: 0}
+  spawnPos: {x: 40, y: 0, z: 0}
   spawnInterval: 1.5
   startDelay: 2
 --- !u!4 &654897783
@@ -1202,7 +1202,7 @@ PrefabInstance:
         type: 3}
       propertyPath: jumpSound
       value: 
-      objectReference: {fileID: 8300000, guid: 0f7d0b7c3397f4dac91f20e8a77d2d57, type: 3}
+      objectReference: {fileID: 8300000, guid: 113ee460fadc340e4957a7404a9fbb27, type: 3}
     - target: {fileID: 5528320341317523362, guid: 7d0a4dbfe150a8944839fd92c7be0654,
         type: 3}
       propertyPath: crashSound
