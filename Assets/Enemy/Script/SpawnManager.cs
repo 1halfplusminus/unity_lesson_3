@@ -5,7 +5,8 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public List<GameObject> spawnItems = new List<GameObject>();
-    public Vector3 spawnRange = new Vector3(20, 0, 0);
+    public Vector3 minSpawnRange = new Vector3(-20, 0, 0);
+    public Vector3 maxSpawnRange = new Vector3(20, 0, 0);
     public Vector3 spawnPos = new Vector3(0, 0, 20);
 
     public float spawnInterval = 1.5f;
@@ -24,7 +25,10 @@ public class SpawnManager : MonoBehaviour
         if (enabled)
         {
             int animalIndex = Random.Range(0, spawnItems.Count);
-            Vector3 instancePos = new Vector3(Random.Range(-spawnRange.x, spawnRange.x), Random.Range(-spawnRange.y, spawnRange.y), Random.Range(-spawnRange.z, spawnRange.z)) + spawnPos;
+            Vector3 instancePos = new Vector3(
+                Random.Range(minSpawnRange.x, maxSpawnRange.x),
+                Random.Range(minSpawnRange.y, maxSpawnRange.y),
+                Random.Range(minSpawnRange.z, maxSpawnRange.z)) + spawnPos;
             var instance = Instantiate(spawnItems[animalIndex], instancePos, spawnItems[animalIndex].transform.rotation);
             animalInstances.Add(instance);
         }
